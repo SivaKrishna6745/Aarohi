@@ -14,12 +14,12 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const variantClasses: Record<Variant, string> = {
-    primary: 'bg-aarohi-magenta text-white hover:opacity-90',
-    secondary: 'bg-aarohi-teal text-white hover:opacity-90',
-    ghost: 'bg-transparent text-aarohi-magenta hover:bg-aarohi-magenta/20',
+    primary: 'bg-aarohi-magenta text-white hover:bg-aarohi-magenta/70',
+    secondary: 'bg-aarohi-teal text-white hover:bg-aarohi-teal/80',
+    ghost: 'bg-transparent text-aarohi-magenta hover:bg-aarohi-magenta/30',
     outline:
-        'border-2 border-aarohi-magenta text-aarohi-magenta bg-transparent hover:bg-aarohi-magenta hover:text-white',
-    destructive: 'bg-red-500 text-white hover:bg-red-700',
+        'border-2 border-aarohi-magenta/80 text-aarohi-magenta bg-transparent hover:bg-aarohi-magenta/80 hover:text-white',
+    destructive: 'bg-red-500/80 text-white hover:bg-red-700/80',
 };
 
 const sizeClasses: Record<Size, string> = {
@@ -43,7 +43,7 @@ export const Button = ({
             className={cn(
                 variantClasses[variant],
                 sizeClasses[size],
-                'outline-none cursor-pointer',
+                'outline-none cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed',
                 className,
                 fullWidth && 'w-full'
             )}
