@@ -16,14 +16,14 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
 }
 
 const sizeClasses: Record<Size, string> = {
-    sm: 'w-80 px-3 py-1.5 text-sm',
-    md: 'w-96 px-4 py-2 text-base',
-    lg: 'w-112 px-5 py-3 text-lg',
+    sm: 'w-80 px-3 py-1 text-sm',
+    md: 'w-96 px-4 py-1.5 text-md',
+    lg: 'w-112 px-5 py-2 text-lg',
 };
 
 export const Input = ({
-    id = '',
-    type = '',
+    id,
+    type,
     label = '',
     error = '',
     placeholder = '',
